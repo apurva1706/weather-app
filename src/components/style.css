@@ -1,5 +1,6 @@
 form {
   margin-top: 3rem;
+  padding-left: 8rem;
 }
 form input[name="city"] {
   background-color: transparent !important;
