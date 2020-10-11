@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import config from './config.js';
 import Weather from './components/weather';
 import Form from './components/form';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'weather-icons/css/weather-icons.min.css';
-
-const key='1fa84376bbcb82908609616c4186b9b3';
 
 class App extends Component {
 constructor(){
@@ -65,7 +64,7 @@ getWeather=async(e)=>{
   const city=e.target.elements.city.value;
   if(city)
   { 
-  const api_call=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`);
+  const api_call=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.key}`);
   const response=await api_call.json();
   console.log(response);
   this.setState({
