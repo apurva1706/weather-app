@@ -64,7 +64,7 @@ getWeather=async(e)=>{
   const city=e.target.elements.city.value;
   if(city)
   { 
-  const api_call=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.API_key}`);
+  const api_call=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.API_key}`);
   const response=await api_call.json();
   console.log(response);
   this.setState({
